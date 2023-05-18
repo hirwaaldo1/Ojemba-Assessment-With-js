@@ -10,9 +10,7 @@ export default function penaltyPoints(password = "") {
   if (typeof password !== "string") password = String(password);
 
   // Check if the password is empty
-  if (!password || password === "" || password == "null") {
-    return 0;
-  }
+  if (!password || password === "" || password == "null") return 0;
 
   // Check if the password has any repeated characters
   let findDublpsNumber = password.match(/(\d)\1+/);
