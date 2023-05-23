@@ -6,6 +6,6 @@
 
 // FUNCTION 1
 export default function countRLetter(inputString) {
-  let findRLetter = /R+/;
+  const findRLetter = /R+/;
   return inputString.match(findRLetter)[0].length;
 }

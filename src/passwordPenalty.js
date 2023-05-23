@@ -13,10 +13,10 @@ export default function penaltyPoints(password = "") {
   if (!password || password === "" || password == "null") return 0;
 
   // Check if the password has any repeated characters
-  let findDublpsNumber = password.match(/(\d)\1+/);
-  let findDublpsLetter = password.match(/(\w)\1+/);
+  const findDublpsNumber = password.match(/(\d)\1+/);
+  const findDublpsLetter = password.match(/(\w)\1+/);
 
-  // Count the number of repeated characters
+  // Count the number and letter that are repeating
   let repeatedCharacters = findDublpsNumber ? findDublpsNumber[0].length : 0;
   repeatedCharacters += findDublpsLetter ? findDublpsLetter[0].length : 0;
 
